@@ -17,7 +17,7 @@ public class Board {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @Size(min=2, max=30) //이렇게 하면 좋은데 스프링 버전이 안맞아서 써놓긴 했는데 기능 안함(2.3.2로 다운그레이드 하면 가능)
+    @Size(min=2, max=30, message="제목은 2자 이상 적어주세요") //이렇게 하면 좋은데 스프링 버전이 안맞아서 써놓긴 했는데 기능 안함(2.3.2로 다운그레이드 하면 가능)
     private String title;
     private String content;
 }
